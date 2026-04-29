@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body style="text-align:center; font-family:Arial;">
+
+    <h1>Detection Result</h1>
+
+    <img src="{{ img }}" width="250"><br><br>
+
+    <h2>Disease: {{ prediction }}</h2>
+    <h3>Confidence: {{ confidence }}%</h3>
+
+    <h2>Treatment:</h2>
+    <ul style="list-style-type:none;">
+        {% for step in treatment %}
+            <li>{{ step }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Status:</h3>
+    <p>Severity: Medium</p>
+    <p>Action: Immediate attention required</p>
+
+    <br>
+    <a href="/">Upload Another Image</a>
+
+</body>
+</html>
